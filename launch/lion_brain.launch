@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="lion_brain" type="lion_brain" name="lion_brain" output="screen">
+    <!-- node parameters -->
+    <param name="serial_name" type="string" value="/dev/ttyUSB1"/>
+    <param name="baud_rate" type="int" value="115200"/>
+
+    <remap from="/lion_brain/target_position" to="/aruco_single/pixel"/>
+    </node>
+</launch>
